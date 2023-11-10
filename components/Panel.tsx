@@ -1,20 +1,21 @@
-"use client"
+"use client";
 
 import { Disclosure } from "@/node_modules/@headlessui/react/dist/index";
 
+interface PanelProps {
+  buttonText: string;
+  panelText: string;
+}
 
-const Panel = () => {
+const Panel: React.FC<PanelProps> = ({ buttonText, panelText }) => {
   return (
-    <div >
+    <div>
       <Disclosure>
         <Disclosure.Button className="p-6 border bg-[#ff0000]">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          {buttonText}
         </Disclosure.Button>
         <Disclosure.Panel className="p-6 border bg-[#e9afaf]">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic aliquid
-          vel pariatur quas. Labore animi harum dolorem laudantium saepe
-          assumenda veritatis rerum esse explicabo reiciendis sunt, numquam
-          neque repellat odio.
+          {panelText}
         </Disclosure.Panel>
       </Disclosure>
     </div>
