@@ -1,6 +1,5 @@
-import Navbar from "./Navbar";
-
+import Panel from "./Panel";
 
 export {
-  Navbar,
+  Panel,
 }
